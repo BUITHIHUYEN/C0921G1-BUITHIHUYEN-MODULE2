@@ -10,6 +10,6 @@ public class ChuyenDoiTienTe {
         System.out.println("Enter giá trị đô :");
        usd = scanner.nextDouble();
        vnd= usd*rate;
-        System.out.println(vnd);
+        System.out.println(vnd +"");
     }
 }
