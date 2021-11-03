@@ -1,37 +1,44 @@
 package lop_va_doi_tuong_trong_java.bai_tap;
 
 public class XayDungLopStopWatch {
-    int startTime;
-    int endTime;
+    long startTime;
+    long endTime;
 
     public XayDungLopStopWatch() {
 
     }
-    
-    public int getStartTime() {
+
+    public long getStartTime() {
+
         return this.startTime;
     }
 
-    public int getEndTime() {
+    public long getEndTime() {
+
         return this.endTime;
     }
-    public int getElapsedTime() {
 
-    }
-    public int setStartTime(int a) {
+    public long setStartTime(long a) {
         return this.startTime = a;
     }
-    public int setEndTime(int b) {
+
+    public long setEndTime(long b) {
+
         return this.endTime = b;
     }
-    public int start() {
-        return this.startTime= new startTime;
-    }
-    public int end() {
-        return this.endTime = new endTime;
+
+    public long start() {
+        return this.startTime = System.currentTimeMillis();
     }
 
+    public long end() {
 
+        return this.endTime = System.currentTimeMillis();
+    }
+
+    public long getElapsetTime() {
+        return this.endTime - this.startTime;
+    }
 
 
 

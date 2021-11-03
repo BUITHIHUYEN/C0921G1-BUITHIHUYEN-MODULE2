@@ -1,4 +1,4 @@
-package lop_va_doi_tuong_trong_java.bai_tap;
+package lop_va_doi_tuong_trong_java.bai_tap.bai_1_phuong_trinh_bac_2;
 
 import java.util.Scanner;
 
