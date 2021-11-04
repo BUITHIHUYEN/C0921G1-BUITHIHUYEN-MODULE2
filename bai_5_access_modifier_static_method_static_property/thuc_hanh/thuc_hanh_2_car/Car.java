@@ -12,17 +12,26 @@ public class Car {
     }
 
     public String getName() {
-        return this.name;
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
     }
 
     public String getEngine() {
-        return this.engine;
+        return engine;
     }
 
-    public String setName() {
-
+    public void setEngine(String engine) {
+        this.engine = engine;
     }
 
-    public String setEngine() {
+    public static int getNumberOfCars() {
+        return numberOfCars;
+    }
+
+    public static void setNumberOfCars(int numberOfCars) {
+        Car.numberOfCars = numberOfCars;
     }
 }
