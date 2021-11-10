@@ -1,18 +1,24 @@
 package bai_6_ke_thua.bai_tap.bai_3_thiet_ke_va_trien_khai_lop_triangle;
 
-public class Shape {
+import bai_6_ke_thua.thuc_hanh.Shape;
+
+public class Triangle extends Shape {
     private double side1 = 1.0;
     private double side2 = 1.0;
     private double side3 = 1.0;
     private double area;
     private double perimeter;
-    public Shape() {
-    }
-    public Shape(double side1,double side2,double side3) {
-        this.side1=side1;
+
+
+
+    public Triangle(String color, boolean filled, double side1, double side2, double side3) {
+        super(color, filled);
+        this.side1 = side1;
         this.side2 = side2;
         this.side3 = side3;
+
     }
+
 
     public double getSide1() {
         return side1;
@@ -39,18 +45,24 @@ public class Shape {
     }
 
     public double getArea() {
-        return area;
-    }
-
-    public void setArea(double area) {
-        this.area = area;
+        double p = this.getPerimeter()/2;
+        return Math.sqrt(p*(p-this.side1)*(p-this.side2)*(p-this.side3)) ;
     }
 
     public double getPerimeter() {
-        return perimeter;
+        return this.side1+this.side2+this.side3;
     }
 
-    public void setPerimeter(double perimeter) {
-        this.perimeter = perimeter;
+
+
+    @Override
+    public String toString() {
+        return "Triangle{" +
+                "side1=" + side1 +
+                ", side2=" + side2 +
+                ", side3=" + side3 +
+                ", area=" + getArea() +
+                ", perimeter=" + getPerimeter() +
+                '}';
     }
 }

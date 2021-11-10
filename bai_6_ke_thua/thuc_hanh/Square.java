@@ -1,6 +1,8 @@
 package bai_6_ke_thua.thuc_hanh;
 
-public class Square extends Rectangle {
+import bai_7_abstract_class_and_inteface.bai_tap.trien_khai_interface_colorable_cho_lop_hinh_hoc.Colorable;
+
+public class Square extends Rectangle  {
     public Square() {
     }
 
@@ -40,4 +42,8 @@ public class Square extends Rectangle {
     }
 
 
+//    @Override
+//    public void howToColor() {
+//        System.out.println("Color all four sides");
+//    }
 }
