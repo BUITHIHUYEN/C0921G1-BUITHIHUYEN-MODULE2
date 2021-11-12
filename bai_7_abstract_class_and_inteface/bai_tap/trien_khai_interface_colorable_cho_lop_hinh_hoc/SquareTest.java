@@ -13,12 +13,11 @@ public class SquareTest {
                 Circle circle = (Circle) shape2;
                 System.out.println("diện tích = " + circle.getArea());
             } else if (shape2 instanceof Rectangle) {
-                Rectangle rectangle = (Rectangle) shape2;
-                System.out.println("diện tích = " + rectangle.getArea());
-            } else if (shape2 instanceof Square) {
+               Rectangle rectangle = (Rectangle) shape2;
+               System.out.println("diện tích = " + rectangle.getArea());
+           } else if (shape2 instanceof Square) {
                 Square square = (Square) shape2;
-                square.howToColor();
-            }
+          }
         }
     }
 }

@@ -6,29 +6,13 @@ public class InterfaceResizeableTest {
         sc[0] = new Circle();
         sc[1] = new Rectangle();
         sc[2] = new Square();
-//        for (InterfaceResizeable interfaceResizeable : sc) {
-//            System.out.println(interfaceResizeable);
-//            System.out.println("diện tích = " + interfaceResizeable.area());
-//            interfaceResizeable.resize(Math.random() * 99 + 1);
-//            System.out.println("diện tích = " + interfaceResizeable.area());
-//            System.out.println("chu vi = " + interfaceResizeable.perimeter());
-//        }
         for (InterfaceResizeable interfaceResizeable : sc) {
-            if (interfaceResizeable instanceof Circle) {
-                Circle circle = (Circle) interfaceResizeable; //eps kieu
-                circle.resize(Math.random() * 99 + 1);
-                System.out.println("diện tích = " + interfaceResizeable.area());
-                System.out.println("chu vi = " + interfaceResizeable.perimeter());
-
-            } else if (interfaceResizeable instanceof Rectangle) {
-                ((Rectangle) interfaceResizeable).resize(Math.random() * 99 + 1);
-                System.out.println("diện tích = " + interfaceResizeable.area());
-                System.out.println("chu vi = " + interfaceResizeable.perimeter());
-            } else {
-                ((Square) interfaceResizeable).resize(Math.random() * 99 + 1);
-                System.out.println("diện tích = " + interfaceResizeable.area());
-                System.out.println("chu vi = " + interfaceResizeable.perimeter());
-            }
+            System.out.println(interfaceResizeable);
+            System.out.println("diện tích = " + interfaceResizeable.area());
+            interfaceResizeable.resize(Math.random() * 99 + 1);
+            System.out.println("diện tích = " + interfaceResizeable.area());
+            System.out.println("chu vi = " + interfaceResizeable.perimeter());
         }
+
     }
-    }
+}
