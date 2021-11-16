@@ -3,12 +3,12 @@ package bai_12_java_collection_framework.bai_tap;
 public class Product {
     private String id;
     private String name;
-    private String price;
+    private int price;
 
     public Product() {
     }
 
-    public Product(String id, String name, String price) {
+    public Product(String id, String name, int price) {
         this.id = id;
         this.name = name;
         this.price = price;
@@ -30,11 +30,11 @@ public class Product {
         this.name = name;
     }
 
-    public String getPrice() {
+    public int getPrice() {
         return price;
     }
 
-    public void setPrice(String price) {
+    public void setPrice(int price) {
         this.price = price;
     }
 
