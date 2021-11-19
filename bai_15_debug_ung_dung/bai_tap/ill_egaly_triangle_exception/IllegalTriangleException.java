@@ -10,9 +10,5 @@ public class IllegalTriangleException extends Exception{
         super(message);
     }
 
-    @Override
-    public String toString() {
-        return "nhập không đúng, mời nhập lại";
-    }
 }
 

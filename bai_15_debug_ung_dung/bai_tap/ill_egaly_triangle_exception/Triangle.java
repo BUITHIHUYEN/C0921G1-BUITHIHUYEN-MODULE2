@@ -9,17 +9,14 @@ public class Triangle {
     }
 
     public Triangle(double a, double b, double c) throws IllegalTriangleException {
+        if (a + b > c && b + c > a && a + c > b) {
+                throw new IllegalTriangleException("tổng 2 canh không lớn hơn cạnh còn lại");
+            }
         if (a>0 && b>0 &&c>0) {
-            if (a + b > c && b + c > a && a + c > b) {
-                System.out.println("thõa mãn điều kiện yêu cầu");
-            } else {
-                throw new IllegalTriangleException("không được nhập cạnh nhỏ hơn 0");
+            throw new IllegalTriangleException("không được nhập cạnh nhỏ hơn 0");
+        }
 
-            }
-        } else {
-            throw new IllegalTriangleException("tổng 2 canh không lớn hơn cạnh còn lại");
 
-            }
         this.a = a;
         this.b = b;
         this.c = c;
