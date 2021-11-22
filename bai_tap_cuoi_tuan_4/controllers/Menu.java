@@ -1,11 +1,16 @@
 package bai_tap_cuoi_tuan_4.controllers;
 
+import bai_tap_cuoi_tuan_4.services.InternService;
 import bai_tap_cuoi_tuan_4.services.impl.ExperienceServiceImpl;
+import bai_tap_cuoi_tuan_4.services.impl.FresherServiceImpl;
+import bai_tap_cuoi_tuan_4.services.impl.InternServiceImpl;
 
 import java.util.Scanner;
 
 public class Menu {
     ExperienceServiceImpl experienceService = new  ExperienceServiceImpl();
+    FresherServiceImpl fresherService = new FresherServiceImpl();
+    InternServiceImpl internService = new InternServiceImpl();
     public void displayMenu() {
         int choice = 0;
         Scanner scanner = new Scanner(System.in);
@@ -31,7 +36,7 @@ public class Menu {
                         switch (choice1) {
                             case 1:
                                 System.out.println("========================================");
-                                System.out.println("add experience");
+                                experienceService.add();
                                 System.out.println("=========================================");
                                 break;
                             case 2:
@@ -41,17 +46,27 @@ public class Menu {
                                 break;
                             case 3:
                                 System.out.println("===================================================");
-                                System.out.println("search experience");
+                                Scanner sc1 = new Scanner(System.in);
+                                String st1 = sc1.nextLine();
+                                System.out.println("Mời nhập tên cần tìm kiếm:");
+                                experienceService.search(st1);
                                 System.out.println("================================================");
                                 break;
                             case 4:
                                 System.out.println("===============================================");
-                                System.out.println("edit experience");
+                                Scanner sc2 = new Scanner(System.in);
+                                System.out.println("Mời nhập firstname cần edit:");
+                                String st2 = sc2.nextLine();
+                                experienceService.edit(st2);
+
                                 System.out.println("==================================================");
                                 break;
                             case 5:
                                 System.out.println("=================================================");
-                                System.out.println("delete experience");
+                                Scanner sc3 = new Scanner(System.in);
+                                System.out.println("Mời nhập email cần delete:");
+                                String st3 = sc3.nextLine();
+                                experienceService.edit(st3);
                                 System.out.println("=====================================================");
                             case 6:
 
@@ -72,30 +87,40 @@ public class Menu {
                         System.out.println("5. delete fresher");
                         System.out.println("6. return menu ");
                        choice2 = scanner.nextInt();
+
                         switch (choice2) {
                             case 1:
                                 System.out.println("========================================");
-                                System.out.println("add fresher");
+                               fresherService.add();
                                 System.out.println("=========================================");
                                 break;
                             case 2:
                                 System.out.println("===========================================");
-                                System.out.println(" display fresher");
+                                fresherService.display();
                                 System.out.println("=============================================");
                                 break;
                             case 3:
                                 System.out.println("===================================================");
-                                System.out.println("search fresher");
+                                Scanner sc3 = new Scanner(System.in);
+                                String fr1 = sc3.nextLine();
+                                System.out.println("Mời nhập tên cần tìm kiếm:");
+                                experienceService.search(fr1);
                                 System.out.println("================================================");
                                 break;
                             case 4:
                                 System.out.println("===============================================");
-                                System.out.println("edit fresher");
+                                Scanner sc4 = new Scanner(System.in);
+                                System.out.println("Mời nhập firstname cần edit:");
+                                String fr2 = sc4.nextLine();
+                                fresherService.edit(fr2);
                                 System.out.println("==================================================");
                                 break;
                             case 5:
                                 System.out.println("=================================================");
-                                System.out.println("delete experience");
+                                Scanner sc5 = new Scanner(System.in);
+                                System.out.println("Mời nhập email cần delete:");
+                                String fr3 = sc5.nextLine();
+                                fresherService.edit(fr3);
                                 System.out.println("=====================================================");
                             case 6:
 
@@ -118,27 +143,37 @@ public class Menu {
                         switch (choice3) {
                             case 1:
                                 System.out.println("========================================");
-                                System.out.println("add internship");
+                               internService.add();
                                 System.out.println("=========================================");
                                 break;
                             case 2:
                                 System.out.println("===========================================");
-                                System.out.println(" display internship");
+                               internService.display();
                                 System.out.println("=============================================");
                                 break;
                             case 3:
                                 System.out.println("===================================================");
-                                System.out.println("search internship");
+                                Scanner sc = new Scanner(System.in);
+                                String it = sc.nextLine();
+                                System.out.println("Mời nhập tên cần tìm kiếm:");
+                                experienceService.search(it);
                                 System.out.println("================================================");
                                 break;
                             case 4:
                                 System.out.println("===============================================");
-                                System.out.println("edit internship");
+                                Scanner sc1 = new Scanner(System.in);
+                                System.out.println("Mời nhập firstname cần edit:");
+                                String it1 = sc1.nextLine();
+
+                                internService.edit(it1);
                                 System.out.println("==================================================");
                                 break;
                             case 5:
                                 System.out.println("=================================================");
-                                System.out.println("delete internship");
+                                Scanner sc2 = new Scanner(System.in);
+                                System.out.println("Mời nhập email cần delete:");
+                                String it2 = sc2.nextLine();
+                                fresherService.edit(it2);
                                 System.out.println("=====================================================");
                             case 6:
 
