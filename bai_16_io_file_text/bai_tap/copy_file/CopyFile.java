@@ -3,8 +3,8 @@ package bai_16_io_file_text.bai_tap.copy_file;
 import java.io.*;
 
 public class CopyFile {
-    public static final String SOURCE_FILE = "";
-    public static final String TARGET_FILE = "";
+    public static final String SOURCE_FILE = "D:\\CODEGYMMODULE2\\C0921G1-BUITHIHUYEN-MODULE2\\src\\bai_16_io_file_text\\bai_tap\\copy_file\\huyen.csv";
+    public static final String TARGET_FILE = "D:\\CODEGYMMODULE2\\C0921G1-BUITHIHUYEN-MODULE2\\src\\bai_16_io_file_text\\bai_tap\\copy_file\\ok.csv";
     //Bước 1: đọc được nội dung của source file
     public static String readFile(FileReader fileReader) {
         int i = 0;
