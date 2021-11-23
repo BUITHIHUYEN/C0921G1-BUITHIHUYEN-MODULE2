@@ -1,4 +1,4 @@
-package com.codegym;
+package bai_16_io_file_text.bai_tap.read_file;
 
 public class Country {
     private int id;
