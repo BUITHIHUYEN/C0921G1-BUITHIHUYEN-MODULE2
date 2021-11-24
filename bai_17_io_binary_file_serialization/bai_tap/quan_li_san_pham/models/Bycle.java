@@ -1,18 +1,19 @@
-package bai_17_io_binary_file_serialization.bai_tap.quan_li_san_pham;
+package bai_17_io_binary_file_serialization.bai_tap.quan_li_san_pham.models;
 
 import java.io.Serializable;
 
-public class Manage implements Serializable {
+public class Bycle implements Serializable {
+    static final long serialVersionUID = 1L;
     private String maSanPham;
     private String tenSanPham;
     private String hangSanXuat;
     private double giaSanPham;
     private String cacMoTaKhac;
 
-    public Manage() {
+    public Bycle() {
     }
 
-    public Manage(String maSanPham, String tenSanPham, String hangSanXuat, double giaSanPham, String cacMoTaKhac) {
+    public Bycle(String maSanPham, String tenSanPham, String hangSanXuat, double giaSanPham, String cacMoTaKhac) {
         this.maSanPham = maSanPham;
         this.tenSanPham = tenSanPham;
         this.hangSanXuat = hangSanXuat;
