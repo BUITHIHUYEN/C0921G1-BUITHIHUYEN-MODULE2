@@ -10,7 +10,7 @@ public class Intern extends Candidates {
     public Intern() {
     }
 
-    public Intern(String iD, String firstName, String lastName, String birthDate, String address, int phone,
+    public Intern(String iD, String firstName, String lastName, String birthDate, String address, String phone,
                   String email, String majors, String semester, String universityName) {
         super(iD, firstName, lastName, birthDate, address, phone, email);
         this.majors = majors;

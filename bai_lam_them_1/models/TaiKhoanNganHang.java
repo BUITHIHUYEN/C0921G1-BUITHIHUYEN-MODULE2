@@ -1,25 +1,23 @@
-package bai_tap_lam_them_tong_hop_module2.models;
+package bai_lam_them_1.models;
 
 public abstract class TaiKhoanNganHang {
-    private int maIDTaiKhoan;
+    private String maTaiKhoan;
     private String tenChuTaiKhoan;
     private String ngayTaoTaiKhoan;
-
     public TaiKhoanNganHang() {
     }
-
-    public TaiKhoanNganHang(int maIDTaiKhoan, String tenChuTaiKhoan, String ngayTaoTaiKhoan) {
-        this.maIDTaiKhoan = maIDTaiKhoan;
+    public TaiKhoanNganHang(String maTaiKhoan, String tenChuTaiKhoan, String ngayTaoTaiKhoan) {
         this.tenChuTaiKhoan = tenChuTaiKhoan;
         this.ngayTaoTaiKhoan = ngayTaoTaiKhoan;
+        this.maTaiKhoan = maTaiKhoan;
     }
 
-    public int getMaIDTaiKhoan() {
-        return maIDTaiKhoan;
+    public String getMaTaiKhoan() {
+        return maTaiKhoan;
     }
 
-    public void setMaIDTaiKhoan(int maIDTaiKhoan) {
-        this.maIDTaiKhoan = maIDTaiKhoan;
+    public void setMaTaiKhoan(String maTaiKhoan) {
+        this.maTaiKhoan = maTaiKhoan;
     }
 
     public String getTenChuTaiKhoan() {
@@ -41,7 +39,7 @@ public abstract class TaiKhoanNganHang {
     @Override
     public String toString() {
         return "TaiKhoanNganHang{" +
-                "maIDTaiKhoan='" + maIDTaiKhoan + '\'' +
+                ", maTaiKhoan='" + maTaiKhoan + '\'' +
                 ", tenChuTaiKhoan='" + tenChuTaiKhoan + '\'' +
                 ", ngayTaoTaiKhoan='" + ngayTaoTaiKhoan + '\'' +
                 '}';

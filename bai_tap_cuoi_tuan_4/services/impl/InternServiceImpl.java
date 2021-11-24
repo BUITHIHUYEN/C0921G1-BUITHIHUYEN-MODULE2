@@ -13,13 +13,13 @@ public class InternServiceImpl implements InternService {
     //  String iD, String firstName, String lastName, String birthDate, String address, int phone,
 //  String email, String majors, String semester, String universityName
     static {
-        interns.add(new Intern("C001", "Nguyễn Ánh", "Tuyết", "21-03-2001", "Liên Chiểu - Đà Nẵng", 985263549,
+        interns.add(new Intern("C001", "Nguyễn Ánh", "Tuyết", "21-03-2001", "Liên Chiểu - Đà Nẵng", "985263549",
                 "tuyetnguyen@gmail.com", "kinh tế", "năm 1", "kinh tế quốc dân"));
-        interns.add(new Intern("C002", "Trần Văn ", "Tú", "28-06-1999", "Liên Chiểu - Đà Nẵng", 985263549,
+        interns.add(new Intern("C002", "Trần Văn ", "Tú", "28-06-1999", "Liên Chiểu - Đà Nẵng", "985263549",
                 "tutran@gmail.com", "kinh tế", "năm 2", "kinh tế quốc dân"));
-        interns.add(new Intern("C003", "Bùi Ánh", "Trinh", "11-03-1998", "Liên Chiểu - Đà Nẵng", 985263549,
+        interns.add(new Intern("C003", "Bùi Ánh", "Trinh", "11-03-1998", "Liên Chiểu - Đà Nẵng", "985263549",
                 "trinhbui@gmail.com", "kinh tế", "năm 3", "kinh tế quốc dân"));
-        interns.add(new Intern("C004", "Thái Văn", "Thái", "21-03-1997", "Liên Chiểu - Đà Nẵng", 985263549,
+        interns.add(new Intern("C004", "Thái Văn", "Thái", "21-03-1997", "Liên Chiểu - Đà Nẵng", "985263549",
                 "thaithai@gmail.com", "kinh tế", "năm 4", "kinh tế quốc dân"));
 
     }
@@ -41,7 +41,7 @@ public class InternServiceImpl implements InternService {
         System.out.println("Mời bạn nhập address: ");
         it.setAddress(sc.nextLine());
         System.out.println("Mời bạn nhập phone: ");
-        it.setPhone(sc.nextInt());
+        it.setPhone(sc.nextLine());
         System.out.println("Mời bạn nhập email: ");
         it.setEmail(sc.nextLine());
         System.out.println("Mời bạn nhập majors:");
@@ -78,7 +78,7 @@ public class InternServiceImpl implements InternService {
                 System.out.println("Mời bạn nhập address: ");
                 interns.get(i).setAddress(sc.nextLine());
                 System.out.println("Mời bạn nhập phone: ");
-                interns.get(i).setPhone(sc.nextInt());
+                interns.get(i).setPhone(sc.nextLine());
                 System.out.println("Mời bạn nhập email: ");
                 interns.get(i).setEmail(sc.nextLine());
                 System.out.println("Mời bạn nhập majors:");

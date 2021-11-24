@@ -8,14 +8,14 @@ public abstract class Candidates {
     private String lastName;
     private String birthDate;
     private String address;
-    private int phone;
+    private String phone;
     private String email;
 
     public Candidates() {
     }
 
     public Candidates(String iD, String firstName,
-                      String lastName, String birthDate, String address, int phone, String email) {
+                      String lastName, String birthDate, String address, String phone, String email) {
         this.iD = iD;
         this.firstName = firstName;
         this.lastName = lastName;
@@ -66,11 +66,11 @@ public abstract class Candidates {
         this.address = address;
     }
 
-    public int getPhone() {
+    public String getPhone() {
         return phone;
     }
 
-    public void setPhone(int phone) {
+    public void setPhone(String phone) {
         this.phone = phone;
     }
 

@@ -10,7 +10,7 @@ public class Experience extends Candidates {
     }
 
     public Experience(String iD, String firstName, String lastName, String birthDate, String address,
-                      int phone, String email,double expInYear, String proSkill) {
+                      String phone, String email,double expInYear, String proSkill) {
         super(iD, firstName, lastName, birthDate, address, phone, email);
         this.expInYear = expInYear;
         this.proSkill = proSkill;
