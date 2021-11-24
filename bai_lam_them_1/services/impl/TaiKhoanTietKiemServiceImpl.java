@@ -9,7 +9,7 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class TaiKhoanTietKiemServiceImpl implements TaiKhoanTietKiemService {
-Validate validate = new Validate();
+
     static ArrayList<TaiKhoanTietKiem> taiKhoanTietKiems= new ArrayList<>();
 static {
     taiKhoanTietKiems.add(new TaiKhoanTietKiem("003456781","Nguyen Van An","04/05/2020",15000000,"05/05/2020",5,6));
@@ -20,7 +20,7 @@ static {
     @Override
     public void add() {
     TaiKhoanTietKiem taiKhoanTietKiem = new TaiKhoanTietKiem();
-    taiKhoanTietKiem.setMaTaiKhoan();
+
 
 
     }
