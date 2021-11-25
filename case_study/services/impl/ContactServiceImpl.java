@@ -1,8 +1,9 @@
 package case_study.services.impl;
 
+import case_study.models.Contract;
 import case_study.services.ContactService;
 
-public class ContactServiceImpl implements ContactService {
+public class ContactServiceImpl extends Contract implements ContactService {
     @Override
     public void display() {
 

@@ -4,10 +4,11 @@ import case_study.models.Employee;
 import case_study.services.EmployeeService;
 
 import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 public class EmployeeServiceImpl extends Employee implements EmployeeService {
-    static ArrayList <Employee> employees = new ArrayList<>();
+    static List<Employee> employees = new ArrayList<>();
     static {
         Employee employee1 = new Employee("A123","Bùi Thị Huyền","20/03/1993","Nữ",230936187,"986764217",
                 "huyenbui123@gmail.com","Đại Học","Quản Lý",2000);
@@ -25,14 +26,10 @@ public class EmployeeServiceImpl extends Employee implements EmployeeService {
     Scanner sc = new Scanner(System.in);
     @Override
     public void display(){
-
         for (Employee employee:employees) {
             System.out.println(employee);
         }
-
     }
-//    String maID, String hoVaTen, String ngaySinh, String gioiTinh, int soCMND, int soDienThoai,
-//    String email, String trinhDo, String viTri, double luong
     @Override
     public void add() {
         Employee employee = new Employee();
@@ -50,10 +47,54 @@ public class EmployeeServiceImpl extends Employee implements EmployeeService {
         employee.setSoDienThoai(sc.nextLine());
         System.out.println("Nhập email");
         employee.setEmail(sc.nextLine());
-        System.out.println("Nhập trình độ:");
-        employee.setTrinhDo(sc.nextLine());
-        System.out.println("Nhập vị trí");
-        employee.setViTri(sc.nextLine());
+            System.out.println("Nhập từ 1 đến 4 để chọn mục hiển thị:");
+            System.out.println("1. Trung cấp");
+            System.out.println("2. Cao Đẳng");
+            System.out.println("3. Đại Học");
+            System.out.println("4. Sau Đại Học");
+        int choice = Integer.parseInt(sc.nextLine());
+            switch (choice){
+                case 1:
+                    employee.setTrinhDo("Trung Cấp");
+                    break;
+                case 2:
+                    employee.setTrinhDo("Cao Đẳng");
+                    break;
+                case 3:
+                    employee.setTrinhDo("Đại Học");
+                    break;
+                case 4:
+                    employee.setTrinhDo("Sau Đại Học");
+                    break;
+            }
+        System.out.println("Nhập từ 1 đến 6 để chọn:");
+        System.out.println("1. Lễ Tân");
+        System.out.println("2. Phục vụ");
+        System.out.println("3. Chuyên viên");
+        System.out.println("4. Giám Sát");
+        System.out.println("5. Quản Lí");
+        System.out.println("6. Giám Đốc");
+        int choice1 = Integer.parseInt(sc.nextLine());
+        switch (choice1){
+            case 1:
+               employee.setViTri("Lễ Tân");
+                break;
+            case 2:
+                employee.setViTri("Phục Vụ");
+                break;
+            case 3:
+                employee.setViTri("Chuyên Viên");
+                break;
+            case 4:
+                employee.setViTri("Giám Sát");
+                break;
+            case 5:
+                employee.setViTri("Quản Lí");
+                break;
+            case 6:
+                employee.setViTri("Giám Đốc");
+                break;
+        }
         System.out.println("Nhập lương:");
         employee.setLuong(Double.parseDouble(sc.nextLine()));
         employees.add(employee);

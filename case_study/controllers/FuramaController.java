@@ -2,6 +2,7 @@ package case_study.controllers;
 
 import case_study.models.Employee;
 import case_study.services.EmployeeService;
+import case_study.services.impl.CustomerServiceImpl;
 import case_study.services.impl.EmployeeServiceImpl;
 
 import java.util.Scanner;
@@ -11,6 +12,7 @@ public class FuramaController {
         int choice = 0;
         Scanner scanner = new Scanner(System.in);
         EmployeeServiceImpl employeeServiceImpl = new EmployeeServiceImpl();
+        CustomerServiceImpl customerServiceImpl = new CustomerServiceImpl();
         while (choice != 6) {
             System.out.println("Nhập từ 1 đến 6 để chọn chức năng");
             System.out.println("1. Employee Management");
@@ -44,7 +46,7 @@ public class FuramaController {
                             case 3:
                                 System.out.println("=============================================");
                                 Scanner sc1 = new Scanner(System.in);
-                                System.out.println("Mời nhập mã id cần edit:");
+                                System.out.println("Mời nhập mã ID");
                                 String emp = sc1.nextLine();
                                 employeeServiceImpl.edit(emp);
                                 System.out.println("==============================================");
@@ -70,17 +72,20 @@ public class FuramaController {
                         switch (choice2) {
                             case 1:
                                 System.out.println("=============================================");
-                                System.out.println("1. Display list customers");
+                                customerServiceImpl.display();
                                 System.out.println("==============================================");
                                 break;
                             case 2:
                                 System.out.println("=============================================");
-                                System.out.println("2. Add new customers");
+                                customerServiceImpl.add();
                                 System.out.println("==============================================");
                                 break;
                             case 3:
                                 System.out.println("=============================================");
-                                System.out.println("3. Edit customers");
+                                Scanner sc2 = new Scanner(System.in);
+                                System.out.println("Mời bạn nhập mã ID");
+                                String cust = sc2.nextLine();
+                                customerServiceImpl.edit(cust);
                                 System.out.println("==============================================");
                                 break;
                             case 4:
@@ -202,9 +207,7 @@ public class FuramaController {
                         break;
                     }
                 case 6:
-                    System.out.println("=============================================");
-                    System.out.println("Exit");
-                    System.out.println("==============================================");
+                    System.exit(0);
                     break;
                 default:
                     break;

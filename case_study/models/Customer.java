@@ -4,16 +4,13 @@ public class Customer extends Person{
     private String loaiKhach;
     private String diaChi;
     public Customer(){
-
     }
-
     public Customer(String maID, String hoVaTen, String ngaySinh, String gioiTinh,
                     int soCMND, String soDienThoai, String email, String loaiKhach, String diaChi) {
         super(maID, hoVaTen, ngaySinh, gioiTinh, soCMND, soDienThoai, email);
         this.loaiKhach = loaiKhach;
         this.diaChi = diaChi;
     }
-
     public String getLoaiKhach() {
         return loaiKhach;
     }
@@ -29,7 +26,6 @@ public class Customer extends Person{
     public void setDiaChi(String diaChi) {
         this.diaChi = diaChi;
     }
-
     @Override
     public String toString() {
         return "Customer{" +
