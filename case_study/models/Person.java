@@ -6,14 +6,14 @@ public abstract class Person {
     private String ngaySinh;
     private String gioiTinh;
     private int soCMND;
-    private int soDienThoai;
+    private String soDienThoai;
     private String email;
 
     public Person() {
     }
 
     public Person(String maID, String hoVaTen, String ngaySinh, String gioiTinh,
-                  int soCMND, int soDienThoai, String email) {
+                  int soCMND, String soDienThoai, String email) {
         this.maID = maID;
         this.hoVaTen = hoVaTen;
         this.ngaySinh = ngaySinh;
@@ -63,11 +63,11 @@ public abstract class Person {
         this.soCMND = soCMND;
     }
 
-    public int getSoDienThoai() {
+    public String getSoDienThoai() {
         return soDienThoai;
     }
 
-    public void setSoDienThoai(int soDienThoai) {
+    public void setSoDienThoai(String soDienThoai) {
         this.soDienThoai = soDienThoai;
     }
 

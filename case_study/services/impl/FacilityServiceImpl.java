@@ -1,6 +1,7 @@
-package case_study.services;
+package case_study.services.impl;
 
 import case_study.models.Facility;
+import case_study.services.FacilityService;
 
 public class FacilityServiceImpl implements FacilityService {
 
@@ -15,7 +16,7 @@ public class FacilityServiceImpl implements FacilityService {
     }
 
     @Override
-    public void edit() {
+    public void edit(String maID) {
 
     }
 }
