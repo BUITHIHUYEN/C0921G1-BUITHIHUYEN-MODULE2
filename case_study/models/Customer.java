@@ -29,8 +29,15 @@ public class Customer extends Person{
     @Override
     public String toString() {
         return "Customer{" +
+                "      id='" + getMaID() + '\'' +
+                ",     hoTen='" + getHoVaTen()+ '\'' +
+                ",     ngaySinh='" + getNgaySinh() + '\'' +
+                ",     gioiTinh='" + getGioiTinh() + '\'' +
+                ",     soCmnd=" + getSoCMND()+
+                ",     soDienThoai=" + getSoDienThoai() +
+                ",     email='" + getEmail() + '\'' +
                 "loaiKhach='" + loaiKhach + '\'' +
                 ", diaChi='" + diaChi + '\'' +
-                "} " + super.toString();
+                "} " ;
     }
 }

@@ -52,11 +52,6 @@ public class FuramaController {
                                 System.out.println("==============================================");
                                 break;
                             case 4:
-                                System.out.println("=============================================");
-                                System.out.println("4. Return main menu");
-                                System.out.println("==============================================");
-                                break;
-                            default:
                                 break;
                         }
                     }
@@ -89,11 +84,6 @@ public class FuramaController {
                                 System.out.println("==============================================");
                                 break;
                             case 4:
-                                System.out.println("=============================================");
-                                System.out.println("4. Return main menu");
-                                System.out.println("==============================================");
-                                break;
-                            default:
                                 break;
                         }
                     }
@@ -126,8 +116,6 @@ public class FuramaController {
                                 System.out.println("=============================================");
                                 System.out.println("4. Return main menu");
                                 System.out.println("==============================================");
-                                break;
-                            default:
                                 break;
                         }
                     }
@@ -169,15 +157,10 @@ public class FuramaController {
                                 System.out.println("==============================================");
                                 break;
                             case 6:
-                                System.out.println("=============================================");
-                                System.out.println("6. Return main menu");
-                                System.out.println("==============================================");
-                                break;
-                            default:
                                 break;
                         }
-                        break;
                     }
+                    break;
                 case 5:
                     int choice5 = 0;
                     while (choice5 != 3) {
@@ -201,11 +184,9 @@ public class FuramaController {
                                 System.out.println("3. Return main menu");
                                 System.out.println("==============================================");
                                 break;
-                            default:
-                                break;
                         }
-                        break;
                     }
+                    break;
                 case 6:
                     System.exit(0);
                     break;
