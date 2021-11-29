@@ -2,6 +2,7 @@ package case_study.services.impl;
 
 import case_study.models.Customer;
 import case_study.services.CustomerService;
+
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Scanner;
@@ -42,30 +43,7 @@ public class CustomerServiceImpl extends Customer implements CustomerService {
         customer.setSoDienThoai(sc.nextLine());
         System.out.println("Nhập email");
         customer.setEmail(sc.nextLine());
-        System.out.println("Nhập từ 1 đến 5 để chọn mục hiển thị:");
-        System.out.println("1. Diamond");
-        System.out.println("2. Platinium");
-        System.out.println("3. Gold ");
-        System.out.println("4. Silver");
-        System.out.println("5. Member");
-        int choice = Integer.parseInt(sc.nextLine());
-        switch (choice) {
-            case 1:
-                customer.setLoaiKhach("Diamond");
-                break;
-            case 2:
-                customer.setLoaiKhach("Platinium");
-                break;
-            case 3:
-                customer.setLoaiKhach("Gold");
-                break;
-            case 4:
-                customer.setLoaiKhach("Silver");
-                break;
-            case 5:
-                customer.setLoaiKhach("Member");
-                break;
-        }
+        customer.setLoaiKhach(loaiKhach());
         System.out.println("Nhập địa chỉ");
         customer.setDiaChi(sc.nextLine());
         customers.add(customer);
@@ -88,34 +66,44 @@ public class CustomerServiceImpl extends Customer implements CustomerService {
                 customers.get(i).setSoDienThoai(sc.nextLine());
                 System.out.println("Nhập email");
                 customers.get(i).setEmail(sc.nextLine());
-                System.out.println("Nhập từ 1 đến 5 để chọn mục hiển thị:");
-                System.out.println("1. Diamond");
-                System.out.println("2. Platinium");
-                System.out.println("3. Gold ");
-                System.out.println("4. Silver");
-                System.out.println("5. Member");
-                int choice = Integer.parseInt(sc.nextLine());
-                switch (choice) {
-                    case 1:
-                        customer.setLoaiKhach("Diamond");
-                        break;
-                    case 2:
-                        customer.setLoaiKhach("Platinium");
-                        break;
-                    case 3:
-                        customer.setLoaiKhach("Gold");
-                        break;
-                    case 4:
-                        customer.setLoaiKhach("Silver");
-                        break;
-                    case 5:
-                        customer.setLoaiKhach("Member");
-                        break;
-                }
-                customers.get(i).setLoaiKhach(sc.nextLine());
+                customers.get(i).setLoaiKhach(loaiKhach());
                 System.out.println("Nhập địa chỉ");
                 customers.get(i).setDiaChi(sc.nextLine());
             }
         }
     }
+    public String loaiKhach() {
+        String loaiKhach = "";
+        System.out.println("Nhập từ 1 đến 5 để chọn mục hiển thị:");
+        System.out.println("1. Diamond");
+        System.out.println("2. Platinium");
+        System.out.println("3. Gold ");
+        System.out.println("4. Silver");
+        System.out.println("5. Member");
+        int choice = Integer.parseInt(sc.nextLine());
+        switch (choice) {
+            case 1:
+                System.out.println("Diamond");
+                loaiKhach = "Diamond";
+                break;
+            case 2:
+                System.out.println("Platinium");
+                loaiKhach = "Platinium";
+                break;
+            case 3:
+                System.out.println("Gold");
+                loaiKhach = "Gold";
+                break;
+            case 4:
+                System.out.println("Silver");
+                loaiKhach = "Silver";
+                break;
+            case 5:
+                System.out.println("Member");
+                loaiKhach = "Member";
+                break;
+        }
+        return loaiKhach;
+    }
+
 }
