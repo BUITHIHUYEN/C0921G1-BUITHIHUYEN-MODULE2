@@ -27,13 +27,11 @@ public class FacilityServiceImpl implements FacilityService {
     static Map<Facility, Integer> facilitys = new LinkedHashMap<>();
 
     static {
-        facilitys.put(new Villa("Villa", 30.5, 65.1, 3, 123, "Vip", 42.6, 12), 1);
-        facilitys.put(new Room("Room", 45.2, 20.8, 6, 234, "Massage"), 2);
-        facilitys.put(new House("House", 29.9, 18.9, 4, 456, "Vip", 12), 3);
+        facilitys.put(new Villa("Villa", 30.5, 65.1, 3, "Tháng", "Vip", 42.6, 12), 1);
+        facilitys.put(new Room("Room", 45.2, 20.8, 6, "Quý", "Massage"), 2);
+        facilitys.put(new House("House", 29.9, 18.9, 4, "Năm", "Vip", 12), 3);
     }
-
     Scanner sc = new Scanner(System.in);
-
     @Override
     public void display() {
         for (Map.Entry<Facility, Integer> mapentry : facilitys.entrySet()) {
@@ -41,12 +39,9 @@ public class FacilityServiceImpl implements FacilityService {
         }
 
     }
-
     @Override
     public void add() {
-
     }
-
     @Override
     public void addVilla() {
         Villa villa = new Villa();
@@ -59,7 +54,7 @@ public class FacilityServiceImpl implements FacilityService {
         System.out.println("Nhập số lượng người tối đa");
         villa.setSoLuongNguoiToiDa(Integer.parseInt(sc.nextLine()));
         System.out.println("Nhập kiểu thuế");
-        villa.setKieuthue(Integer.parseInt(sc.nextLine()));
+        villa.setKieuthue(sc.nextLine());
         System.out.println("Nhập tiêu chuẩn phòng");
         villa.setTieuChuanPhong(sc.nextLine());
         System.out.println("Diện tích hồ bơi");
@@ -97,7 +92,7 @@ public class FacilityServiceImpl implements FacilityService {
         System.out.println("Nhập số lượng người tối đa");
         house.setSoLuongNguoiToiDa(Integer.parseInt(sc.nextLine()));
         System.out.println("Nhập kiểu thuê");
-        house.setKieuthue(Integer.parseInt(sc.nextLine()));
+        house.setKieuthue(sc.nextLine());
         System.out.println("Nhập tiêu chuẩn phòng");
         house.setTieuChuanPhong(sc.nextLine());
         System.out.println("Nhập số tầng");

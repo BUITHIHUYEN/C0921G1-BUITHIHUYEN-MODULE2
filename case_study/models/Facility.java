@@ -5,12 +5,12 @@ public abstract class Facility {
     private double dienTichSuDung;
     private double chiPhiThue;
     private int soLuongNguoiToiDa;
-    private int kieuthue;
+    private String kieuthue;
 
     public Facility() {
     }
 
-    public Facility(String tenDichVu, double dienTichSuDung, double chiPhiThue, int soLuongNguoiToiDa, int kieuthue) {
+    public Facility(String tenDichVu, double dienTichSuDung, double chiPhiThue, int soLuongNguoiToiDa, String kieuthue) {
         this.tenDichVu = tenDichVu;
         this.dienTichSuDung = dienTichSuDung;
         this.chiPhiThue = chiPhiThue;
@@ -50,11 +50,11 @@ public abstract class Facility {
         this.soLuongNguoiToiDa = soLuongNguoiToiDa;
     }
 
-    public int getKieuthue() {
+    public String  getKieuthue() {
         return kieuthue;
     }
 
-    public void setKieuthue(int kieuthue) {
+    public void setKieuthue(String kieuthue) {
         this.kieuthue = kieuthue;
     }
 

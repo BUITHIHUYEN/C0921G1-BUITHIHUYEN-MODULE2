@@ -138,13 +138,10 @@ public class FuramaController {
                                 }
                             case 3:
                                 System.out.println("=============================================");
-                                System.out.println("3. Add new facility maintenance");
+                                System.out.println("3. Display new facility maintenance");
                                 System.out.println("==============================================");
                                 break;
                             case 4:
-                                System.out.println("=============================================");
-                                System.out.println("4. Return main menu");
-                                System.out.println("==============================================");
                                 break;
                         }
                     }
