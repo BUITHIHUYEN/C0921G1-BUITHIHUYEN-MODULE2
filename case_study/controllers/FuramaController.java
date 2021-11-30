@@ -4,6 +4,7 @@ import case_study.models.Employee;
 import case_study.services.EmployeeService;
 import case_study.services.impl.CustomerServiceImpl;
 import case_study.services.impl.EmployeeServiceImpl;
+import case_study.services.impl.FacilityServiceImpl;
 
 import java.util.Scanner;
 
@@ -13,6 +14,7 @@ public class FuramaController {
         Scanner scanner = new Scanner(System.in);
         EmployeeServiceImpl employeeServiceImpl = new EmployeeServiceImpl();
         CustomerServiceImpl customerServiceImpl = new CustomerServiceImpl();
+        FacilityServiceImpl facilityServiceImpl = new FacilityServiceImpl();
         while (choice != 6) {
             System.out.println("Nhập từ 1 đến 6 để chọn chức năng");
             System.out.println("1. Employee Management");
@@ -99,14 +101,41 @@ public class FuramaController {
                         switch (choice3) {
                             case 1:
                                 System.out.println("=============================================");
-                                System.out.println("1. Display list facility");
+                                facilityServiceImpl.display();
                                 System.out.println("==============================================");
                                 break;
                             case 2:
-                                System.out.println("=============================================");
-                                System.out.println("2. Add new facility");
-                                System.out.println("==============================================");
-                                break;
+                                Scanner scanner1 = new Scanner(System.in);
+                                int choicen = 0;
+                                while (choicen != 4) {
+
+                                    System.out.println("Mời nhập 1 đến 4 để chọn:");
+                                    System.out.println("1. addVilla");
+                                    System.out.println("2. addRoom");
+                                    System.out.println("3. addHouse");
+                                    System.out.println("4. Return menu");
+                                    choicen = Integer.parseInt(scanner1.nextLine());
+                                    switch (choicen) {
+                                        case 1:
+                                            System.out.println("=============================================");
+                                            facilityServiceImpl.addVilla();
+                                            System.out.println("=============================================");
+                                            break;
+                                        case 2:
+                                            System.out.println("=============================================");
+                                            facilityServiceImpl.addRoom();
+                                            System.out.println("=============================================");
+                                            break;
+                                        case 3:
+                                            System.out.println("=============================================");
+                                            facilityServiceImpl.addHouse();
+                                            System.out.println("=============================================");
+                                            break;
+                                        case 4:
+                                            break;
+                                    }
+                                    break;
+                                }
                             case 3:
                                 System.out.println("=============================================");
                                 System.out.println("3. Add new facility maintenance");
