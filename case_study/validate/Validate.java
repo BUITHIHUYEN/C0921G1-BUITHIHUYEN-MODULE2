@@ -9,7 +9,7 @@ public class Validate {
         while (true) {
             System.out.println("Nhập tên dịch vụ");
             tenDichVu = scanner.nextLine();
-            Pattern pattern = Pattern.compile("");
+            Pattern pattern = Pattern.compile("^[A-Z][a-z]*([\\s][A-Z][a-z])*$");
             if (pattern.matcher(tenDichVu).find()) {
                 break;
             } else {
@@ -24,7 +24,7 @@ public class Validate {
         while (true) {
             System.out.println("Mời nhập mã dịch vụ Villa");
             maDVVilla = scanner.nextLine();
-            Pattern pattern = Pattern.compile("");
+            Pattern pattern = Pattern.compile("^(SV)(VL)-[\\d]{4}$");
             if (pattern.matcher(maDVVilla).find()) {
                 break;
             } else {
@@ -37,9 +37,9 @@ public class Validate {
     public String maDVRoom() {
         String maDVRoom;
         while (true) {
-            System.out.println("Mời nhập mã dịch vụ room");
+            System.out.println("Mời nhập mã dịch vụ room.csv");
             maDVRoom = scanner.nextLine();
-            Pattern pattern = Pattern.compile("");
+            Pattern pattern = Pattern.compile("^(SV)(RO)-[\\d]{4}$");
             if (pattern.matcher(maDVRoom).find()) {
                 break;
             } else {
@@ -53,9 +53,9 @@ public class Validate {
         String maDVHouse;
 
         while (true) {
-            System.out.println("Mời nhập mã dịch vụ house");
+            System.out.println("Mời nhập mã dịch vụ house.csv");
             maDVHouse = scanner.nextLine();
-            Pattern pattern = Pattern.compile("");
+            Pattern pattern = Pattern.compile("^(SV)(HO)-[\\d]{4}$");
             if (pattern.matcher(maDVHouse).find()) {
                 break;
             } else {
@@ -72,11 +72,13 @@ public class Validate {
                 double dienTichSuDung = Double.parseDouble(scanner.nextLine());
                 if (dienTichSuDung > 30) {
                     return dienTichSuDung;
+                }else if (dienTichSuDung<30){
+                    System.out.println("nhập số lớn hơn 30");
                 } else {
                     throw new Exception();
                 }
             } catch (Exception exception) {
-                System.out.println("Không được nhập diện tích nhỏ hơn 30");
+                System.out.println("Không được nhập chữ");
             }
         }
     }
@@ -88,11 +90,13 @@ public class Validate {
                 double chiPhiThue = Double.parseDouble(scanner.nextLine());
                 if (chiPhiThue > 0) {
                     return chiPhiThue;
+                } else if (chiPhiThue<1){
+                    System.out.println("nhập số lớn hơn 0");
                 } else {
                     throw new Exception();
                 }
             } catch (Exception exception) {
-                System.out.println("Không được nhập chi phí thuế là số âm");
+                System.out.println("Không được nhập chữ");
             }
         }
     }
@@ -104,11 +108,13 @@ public class Validate {
                 Integer soLuongNguoiToiDa = Integer.parseInt(scanner.nextLine());
                 if (soLuongNguoiToiDa > 0 && soLuongNguoiToiDa < 20) {
                     return soLuongNguoiToiDa;
+                } else if (soLuongNguoiToiDa<0||soLuongNguoiToiDa>20){
+                    System.out.println("nhập số lớn hơn 0 và nhỏ hơn 20");
                 } else {
                     throw new Exception();
                 }
             } catch (Exception exception) {
-                System.out.println("Phải nhập số lượng người tố đa lớn hơn 0 và nhỏ hơn 20");
+                System.out.println("không được nhập chữ");
             }
         }
     }
@@ -118,7 +124,7 @@ public class Validate {
         while (true) {
             System.out.println("Mời nhập kiểu thuê");
             kieuThue = scanner.nextLine();
-            Pattern pattern = Pattern.compile("");
+            Pattern pattern = Pattern.compile("^[A-Z][a-z]*([\\s][A-Z][a-z])*$");
             if (pattern.matcher(kieuThue).find()) {
                 break;
             } else {
@@ -135,11 +141,13 @@ public class Validate {
                 Double dienTichHoBoi = Double.parseDouble(scanner.nextLine());
                 if (dienTichHoBoi > 30) {
                     return dienTichHoBoi;
+                } else if(dienTichHoBoi<30){
+                    System.out.println("nhập số lớn hơn 30");
                 } else {
                     throw new Exception();
                 }
             } catch (Exception exception) {
-                System.out.println("không được nhập diện tích hồ bơi <30");
+                System.out.println("không được nhập chữ");
             }
         }
     }
@@ -149,7 +157,7 @@ public class Validate {
         while (true) {
             System.out.println("Mời nhập tiêu chuẩn phòng");
             tieuChuanPhong = scanner.nextLine();
-            Pattern pattern = Pattern.compile("");
+            Pattern pattern = Pattern.compile("^[A-Z][a-z]*([\\s][A-Z][a-z])*$");
             if (pattern.matcher(tieuChuanPhong).find()) {
                 return tieuChuanPhong;
             } else {
@@ -165,11 +173,13 @@ public class Validate {
                 Integer soTang = Integer.parseInt(scanner.nextLine());
                 if (soTang > 0) {
                     return soTang;
+                } else if (soTang<1){
+                    System.out.println("Nhập số lớn hơn 0");
                 } else {
                     throw new Exception();
                 }
             } catch (Exception exception) {
-                System.out.println("Không được nhập số tầng nhỏ hơn 0");
+                System.out.println("Không được nhập chữ");
             }
         }
     }

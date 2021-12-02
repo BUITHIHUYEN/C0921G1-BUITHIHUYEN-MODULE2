@@ -28,16 +28,9 @@ public class Customer extends Person{
     }
     @Override
     public String toString() {
-        return "Customer{" +
-                "      id='" + getMaID() + '\'' +
-                ",     hoTen='" + getHoVaTen()+ '\'' +
-                ",     ngaySinh='" + getNgaySinh() + '\'' +
-                ",     gioiTinh='" + getGioiTinh() + '\'' +
-                ",     soCmnd=" + getSoCMND()+
-                ",     soDienThoai=" + getSoDienThoai() +
-                ",     email='" + getEmail() + '\'' +
-                "loaiKhach='" + loaiKhach + '\'' +
-                ", diaChi='" + diaChi + '\'' +
-                "} " ;
+        return getMaID() +","+ getHoVaTen()+","+getNgaySinh() +","+
+                getGioiTinh() +","+ getSoCMND()+","+ getSoDienThoai()+","+
+                getEmail()+","+ loaiKhach +","+diaChi;
+
     }
 }

@@ -4,7 +4,8 @@ public class Employee extends Person {
     private String trinhDo;
     private String viTri;
     private double luong;
-    public Employee(){
+
+    public Employee() {
     }
 
     public Employee(String maID, String hoVaTen, String ngaySinh, String gioiTinh, int soCMND, String soDienThoai,
@@ -41,17 +42,9 @@ public class Employee extends Person {
 
     @Override
     public String toString() {
-        return "Employee{" +
-                "      id='" + getMaID() + '\'' +
-                ",     hoTen='" + getHoVaTen()+ '\'' +
-                ",     ngaySinh='" + getNgaySinh() + '\'' +
-                ",     gioiTinh='" + getGioiTinh() + '\'' +
-                ",     soCmnd=" + getSoCMND()+
-                ",     soDienThoai=" + getSoDienThoai() +
-                ",     email='" + getEmail() + '\'' +
-                "     trinhDo='" + getTrinhDo() + '\'' +
-                ",    viTri='" + getViTri() + '\'' +
-                ",    luong=" + getLuong() +
-                '}';
+        return getMaID() + "," + getHoVaTen() + "," + getNgaySinh() + "," + getGioiTinh() + ","
+                + getSoCMND() + "," + getSoDienThoai() + "," + getEmail() + "," + getTrinhDo() + "," +
+                getViTri() + "," + getLuong();
+
     }
 }
