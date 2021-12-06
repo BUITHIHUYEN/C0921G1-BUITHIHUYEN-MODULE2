@@ -1,11 +1,13 @@
 package case_study.services.impl;
+
 import case_study.models.Booking;
-import case_study.models.Customer;
 import case_study.readwrite.FileWriterReader;
 import case_study.services.BookingService;
+
 import java.util.*;
+
 public class BookingServiceImpl implements BookingService {
-        final String PATH = "D:\\CODEGYMMODULE2\\C0921G1-BUITHIHUYEN-MODULE2\\src\\case_study\\data\\booking.csv";
+    final String PATH = "D:\\CODEGYMMODULE2\\C0921G1-BUITHIHUYEN-MODULE2\\src\\case_study\\data\\booking.csv";
     static Set<Booking> bookings = new TreeSet<>(new BookingComparator());
 
     {
@@ -42,7 +44,6 @@ public class BookingServiceImpl implements BookingService {
         booking.setTenDichVu(scanner.nextLine());
         System.out.println("Nhập loại dịch vụ");
         booking.setLoaiDichVu(scanner.nextLine());
-//        bookings.add(booking);
         Booking bookings = new Booking();
         customerService.display();
         bookings.setMaKhachHang(customerService.maKhachHang());
@@ -61,7 +62,7 @@ public class BookingServiceImpl implements BookingService {
 
     public Set<Booking> covertStringToBooking() {
         List<String> stringList = FileWriterReader.readFile(PATH);
-        Set<Booking> bookingList = new TreeSet<>();
+        Set<Booking> bookingList = new TreeSet<>(new BookingComparator());
         String[] arrBooking;
         for (String line : stringList) {
             arrBooking = line.split(",");

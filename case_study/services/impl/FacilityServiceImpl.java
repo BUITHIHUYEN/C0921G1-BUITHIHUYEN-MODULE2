@@ -4,7 +4,7 @@ import case_study.models.House;
 import case_study.models.Room;
 import case_study.models.Villa;
 import case_study.services.FacilityService;
-import case_study.validate.Validate;
+import case_study.utils.validate.Validate;
 import java.util.*;
 public class FacilityServiceImpl implements FacilityService {
     static Map<Facility, Integer> facilitys = new LinkedHashMap<>();
@@ -16,10 +16,11 @@ public class FacilityServiceImpl implements FacilityService {
     Scanner sc = new Scanner(System.in);
     @Override
     public void display() {
-        for (Map.Entry<Facility, Integer> mapentry : facilitys.entrySet()) {
+        for (Map.Entry<Facility, Integer> mapentry :facilitys.entrySet()) {
             System.out.println(mapentry.getKey());
         }
     }
+    
     @Override
     public void add() {
     }
@@ -60,7 +61,7 @@ public class FacilityServiceImpl implements FacilityService {
         System.out.println("Nhập kiểu thuê");
         room.setKieuthue(validate.kieuThue());
         System.out.println("Nhập dịch vụ miễn phí đi kèm");
-        room.setDichVuMienPhiDiKem(sc.nextLine());
+        room.setDichVuMienPhiDiKem(validate.dichVuDiKem());
         facilitys.put(room,1);
     }
     @Override

@@ -6,6 +6,7 @@ import case_study.services.impl.BookingServiceImpl;
 import case_study.services.impl.CustomerServiceImpl;
 import case_study.services.impl.EmployeeServiceImpl;
 import case_study.services.impl.FacilityServiceImpl;
+import jdk.nashorn.internal.ir.WhileNode;
 
 import java.util.Scanner;
 
@@ -226,9 +227,10 @@ public class FuramaController {
                     break;
                 }
             } catch (Exception exception) {
-                System.out.println("Nhập ngu quá!không được nhập chữ");
+                System.out.println("Nhập ngu quá mi! Nhập lại chơi!");
             }
-
         }
     }
+
 }
+
